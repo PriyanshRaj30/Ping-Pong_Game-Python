@@ -1,2 +1,5 @@
 # Ping-Pong_Game-Python
-echo "# Ping-Pong-Game--Python" >> README.md git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/PriyanshRaj30/Ping-Pong-Game--Python.git git push -u origin main
+Welcome to my Python Ping Pong game project! This classic arcade-style game is designed to provide endless entertainment and test your reflexes in a thrilling game of Ping Pong.
+
+This game was created with the help of the Turtle library and inspired by classic arcade Ping Pong games.
+Have fun playing and happy coding!
