@@ -35,34 +35,34 @@ ball.penup()
 ball.goto(0,0)
 
 #Ball Movement::
-ball.dx = 0.1
-ball.dy = 0.1
+ball.dx = 0.3
+ball.dy = 0.3
 
 #Functions::
 def paddle_a_up():
 	y = paddle_a.ycor()
-	y +=15
-	if(y<=300):
+	y +=30
+	if(y<=250):
 		paddle_a.sety(y)
 	
 
 def paddle_a_down():
 	y = paddle_a.ycor()
-	y -=20
-	if(y>=(-300)):
+	y -=30
+	if(y>=(-250)):
 		paddle_a.sety(y)	
 
 def paddle_b_up():	
 	y = paddle_b.ycor()
-	y +=20
-	if(y<=300):
+	y +=30
+	if(y<=255):
 		paddle_b.sety(y)	
 
 
 def paddle_b_down():
 	y = paddle_b.ycor()
-	y -=20
-	if(y>=(-300)):
+	y -=30
+	if(y>=(-255)):
 		paddle_b.sety(y)	
 
 
@@ -71,6 +71,7 @@ win.onkeypress(paddle_a_up,"w")
 win.onkeypress(paddle_a_down,"s")
 win.onkeypress(paddle_b_up, "Up")
 win.onkeypress(paddle_b_down, "Down")
+win.onkeypress(win.bye,"q")
 while True:
 	win.update()
 	ball.setx(ball.xcor() + ball.dx)
@@ -88,9 +89,14 @@ while True:
 		ball.goto(0,0)
 		ball.dx *=-1
 		
-	if ball.xcor()<-400:
+	if(ball.xcor()<-400):
 		ball.goto(0,0)
 		ball.dx *=-1
-
-	# print(ball.xcor())
+		
+	if(ball.xcor() > 340 and ball.xcor() < 350 and (ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50)):
+		ball.dx *=-1
+	
+	if(ball.xcor() < -340 and ball.xcor() > -350 and (ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50)):
+		ball.setx(-340)
+		ball.dx *=-1
 	
