@@ -55,27 +55,27 @@ ball.dy = 0.3
 #Functions::
 def paddle_a_up():
 	y = paddle_a.ycor()
-	y +=30
+	y +=60
 	if(y<=250):
 		paddle_a.sety(y)
 	
 
 def paddle_a_down():
 	y = paddle_a.ycor()
-	y -=30
+	y -=60
 	if(y>=(-250)):
 		paddle_a.sety(y)	
 
 def paddle_b_up():	
 	y = paddle_b.ycor()
-	y +=30
+	y +=60
 	if(y<=255):
 		paddle_b.sety(y)	
 
 
 def paddle_b_down():
 	y = paddle_b.ycor()
-	y -=30
+	y -=60
 	if(y>=(-255)):
 		paddle_b.sety(y)	
 
